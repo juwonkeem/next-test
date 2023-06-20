@@ -33,5 +33,18 @@
       "prettier --write",
       "eslint --fix"
     ]
-  }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "global": "readonly",
+    "process": "readonly"
+  },
+  
+    "presets": ["next/babel"],
+    "plugins": []
+  
+  
 }
