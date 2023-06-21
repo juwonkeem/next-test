@@ -11,6 +11,12 @@ async function fetchUsers() {
   return users;
 }
 
+interface User {
+  name: string;
+  email: string;
+  // 다른 사용자 속성들도 필요에 따라 추가해주세요
+}
+
 // component 하나 생성 후 export default 하면 자동으로 페이지 생성됨
 export default async function List() {
   /*
@@ -30,23 +36,13 @@ export default async function List() {
   return (
     <div>
       <div>
-        <h4 className="title">List</h4>
+        <h4 className="title">User-List</h4>
         <h4>
-          {users.map((user: any, i: number) => (
-            <div className="div1" key={user._id}>
-              name: {user.name} <br />
-              email : {user.email}
-              <img
-                src={`/image${i}.jpg`}
-                alt="이미지"
-                className="card-img"
-              ></img>
-              {/* <Image src = {card1} alt="이미지" className="card-img"/> */}
-              {/* 외부이미지 넣을때 + 조건 = width, height 강제로 넣어줘야함  
-                          and next.config.js 에서 image 경로 지정해줘야함
-                      */}
-              {/* <Image src ="외부경로" width = {} height = {} /> */}
-              {/* <h4>{items[cur]}</h4> */}
+          {users.map((user: User, i: number) => (
+            <div className="cart-item" key={i}>
+              <p>{i + 1}</p>
+              <p>{user.name}</p>
+              <p>{user.email}</p>
             </div>
           ))}
         </h4>
