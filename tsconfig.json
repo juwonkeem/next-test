@@ -24,6 +24,6 @@
     },
     "allowImportingTsExtensions": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/mongodb.js", "src/app/page.tsx", "util/database.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/mongodb.js", "src/app/page.tsx", "util/database.ts", "lib/mongo/users.js"],
   "exclude": ["node_modules"]
 }

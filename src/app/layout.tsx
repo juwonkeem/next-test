@@ -22,6 +22,7 @@ export default function RootLayout({
           <Link href="/">홈</Link>
           <Link href="/list">List</Link>
           <Link href="/card">Card</Link>
+          <Link href="/insert">회원가입</Link>
         </div>
         {children} {/* page.js 들어가는부분 */}
       </body>
